@@ -9,7 +9,7 @@ console.log(text.match(literalPattern));
 
 // 3. Metacharacters: Metacharacters are special characters in regex that have a predefined meaning.
 
-const metacharPattern = /h.llo/;
+const metacharPattern = /h.llo/; //a*b a+b colou?r ^hello world$ 
 console.log(text.match(metacharPattern)); 
 
 // 4. Character Classes: Character classes allow you to specify a set of characters that can match at a certain position in the text.

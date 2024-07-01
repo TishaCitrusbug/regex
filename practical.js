@@ -14,7 +14,7 @@ console.log(text.match(metacharPattern));
 
 // 4. Character Classes: Character classes allow you to specify a set of characters that can match at a certain position in the text.
 
-const charClassPattern = /[hw]orld/;
+const charClassPattern = /[hw]orld/; //[abc] [0-9] 
 console.log(text.match(charClassPattern)); 
 
 // 5. Quantifiers: Quantifiers specify how many times a character or a group of characters can occur.

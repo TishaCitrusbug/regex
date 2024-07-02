@@ -11,6 +11,43 @@ At least one digit, (?=.*?[0-9])
 At least one special character, (?=.*?[#?!@$%^&*-])
 Minimum eight in length .{8,} (with the anchors)
 
+^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*_)(?!.* ).{8,16}$
+/^ and $/:
+
+^: Asserts the position at the start of the string.
+$: Asserts the position at the end of the string.
+Together, they ensure the entire string is checked against the pattern, not just a part of it.
+(?=.*[0-9]):
+
+(?= ... ): This is a positive lookahead assertion. It asserts that what is inside the parentheses must be present in the string, but it doesn't consume characters in the string.
+.*: Matches any character (except for line terminators) any number of times, including zero times.
+[0-9]: Matches any digit from 0 to 9.
+Combined, (?=.*[0-9]) ensures that the string contains at least one digit.
+(?=.*[a-z]):
+
+[a-z]: Matches any lowercase letter.
+Combined, (?=.*[a-z]) ensures that the string contains at least one lowercase letter.
+(?=.*[A-Z]):
+
+[A-Z]: Matches any uppercase letter.
+Combined, (?=.*[A-Z]) ensures that the string contains at least one uppercase letter.
+(?=.*_):
+
+_: Matches the underscore character.
+Combined, (?=.*_) ensures that the string contains at least one underscore.
+(?!.* ):
+
+(?! ... ): This is a negative lookahead assertion. It asserts that what is inside the parentheses must not be present in the string.
+.*: Matches any character (except for line terminators) any number of times, including zero times.
+(space): Matches a space character.
+Combined, (?!.* ) ensures that the string does not contain any spaces.
+.{8,16}:
+
+.: Matches any character (except for line terminators).
+{8,16}: Specifies that the preceding element must occur at least 8 times and at most 16 times.
+Combined, .{8,16} ensures that the string is between 8 and 16 characters long.
+
+
 
 
 

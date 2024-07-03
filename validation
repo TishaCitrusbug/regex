@@ -11,7 +11,7 @@ At least one digit, (?=.*?[0-9])
 At least one special character, (?=.*?[#?!@$%^&*-])
 Minimum eight in length .{8,} (with the anchors)
 
-^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*_)(?!.* ).{8,16}$
+^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*?[#?!@$%^&*-])(?=.*_)(?!.* ).{8,16}$
 /^ and $/:
 
 ^: Asserts the position at the start of the string.
